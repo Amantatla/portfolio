@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Document</title>
+    </head>
+    <body class="bg-[#06021a] font-[Poppins] overflow-x-hidden">
+        <div class="w-full">
+            <nav
+                class="bg-[#21212e] py-3 md:flex md:items-center md:justify-between">
+                <div class="flex items-center justify-between mx-10 my-2">
+                    <img src="img/hero-img.png"
+                        class="select-none h-[40px] w-[40px]">
+                    <span
+                        class="-mx-[1px] text-2xl cursor-pointer text-[#793fff] px-[10px]"><b>Aman
+                            Tatla</b></span>
+                    <!-- <span
+                        class="text-3xl cursor-pointer text-[#793fff] md:hidden block">
+                        <ion-icon
+                            name="menu-outline"
+                            onclick="Menu(this)"></ion-icon></span> -->
+                            <span
+                            class="text-3xl cursor-pointer text-[#793fff] md:hidden block">
+                            <i class="fa-solid fa-bars" onclick="Menu(this)"></i>
+                          </span>   
+                </div>
+                <ul
+                    class="md:flex md:items-center md:z-auto md:static bg-[#21212e] absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                    <!--z-[-1]-->
+                    <li class="mx-4 my-4 md:my-0">
+                        <a href="#"
+                            class="text-white hover:text-[#793fff] duration-500">Home</a>
+                    </li>
+                    <li class="mx-4 my-4 md:my-0">
+                        <a href="#"
+                            class="text-white hover:text-[#793fff] duration-500">About</a>
+                    </li>
+                    <li class="mx-4 my-4 md:my-0">
+                        <a href="#"
+                            class="text-white hover:text-[#793fff] duration-500">Experience</a>
+                    </li>
+                    <li class="mx-4 my-4 md:my-0">
+                        <a href="#"
+                            class="text-white hover:text-[#793fff] duration-500">Projects</a>
+                    </li>
+                    <li class="mx-4 my-4 md:my-0">
+                        <button
+                            class="bg-[#793fff] shadow-lg shadow-[#793fff]/30 text-white h-8 w-32 rounded-[5px]">👋
+                            Contact</button>
+                    </li>
+                </ul>
+            </nav>
+            <!-- intro -->
+            <section>
+                <div
+                    class="px-[80px] py-12 bg-[#21212e] 2xl:py-2 xl:py-2 lg:py-2 md:py-2 sm:py-2">
+                    <div
+                        class="mx-[5px] -mt-[30px] h-[250px] w-[250px] sm:h-[220px] sm:w-[220px] sm:mt-[50px] sm:mx-[320px] md:h-[250px] md:w-[250px] md:mt-[50px] md:mx-[410px] lg:h-[250px] lg:w-[250px] lg:mt-[50px] lg:mx-[700px] xl:h-[250px] xl:w-[250px] xl:mt-[50px] xl:mx-[800px] 2xl:h-[250px] 2xl:w-[250px] 2xl:mt-[50px] 2xl:mx-[900px]">
+                        <img src="img/hero-img.png" class="select-none">
+                    </div>
+                    <div
+                        class="mt-5 sm:-mt-[200px] sm:-mx-[30px] md:mx-[10px] lg:mx-[50px] xl:mx-[220px] 2xl:mx-[250px]">
+                        <span class="text-white text-3xl">👋 Hi, I'm <span
+                                class="text-[#793fff] text-3xl font-bold">Aman</span></span>
+                    </div>
+                    <div
+                        class="mt-4 text-justify sm:-mx-[30px] md:mx-[10px] lg:mx-[50px] xl:mx-[220px] 2xl:mx-[250px]">
+                        <span class="text-white text-1xl z-50">Well I am a Web
+                            Developer working to<br>make internet a place with
+                            modern sites.<br><span class="font-semibold">Know
+                                more about me below. ⬇️</span></span><br>
+                    </div>
+                    <div
+                        class="mt-4 sm:pb-[50px] sm:-mx-[30px] md:mx-[10px] lg:mx-[50px] xl:mx-[220px] 2xl:mx-[250px]">
+                        <button
+                            class="bg-[#793fff] text-white h-10 w-40 rounded-[5px] shadow-lg shadow-[#793fff]/30">Download
+                            CV</button>
+                    </div>
+                </div>
+            </section>
+            <!-- About -->
+            <section>
+                <p
+                    class="my-[50px] text-center text-3xl text-white font-extrabold">Here's
+                    More <span class="text-[#793fff]">About Me</span></p>
+                <img src="img/about-img.png"
+                    class="select-none invisible h-[0px] w-[0px] md:visible md:h-[350px] md:w-[350px] md:mx-[20px] sm:visible sm:h-[200px] sm:w-[200px] sm:mx-[40px] lg:visible lg:h-[400px] lg:w-[400px] lg:mx-[100px] xl:visible xl:h-[400px] xl:w-[400px] xl:mx-[150px] 2xl:visible 2xl:h-[500px] 2xl:w-[500px] 2xl:mx-[200px]">
+                <div
+                    class="bg-[#21212e] shadow-lg flex mx-[28px] mb-8 rounded-[10px] w-auto sm:mx-[260px] md:mx-[400px] md:w-[350px] md:-mt-[350px] sm:-mt-[210px] lg:mx-[500px] lg:w-[500px] lg:-mt-[400px] xl:mx-[600px] xl:w-[580px] xl:-mt-[400px] 2xl:mx-[700px] 2xl:w-[600px] 2xl:-mt-[500px]">
+                    <div
+                        class="bg-red-600 mx-[20px] mt-6 mb-8 rounded-full h-[15px] w-[15px]"></div>
+                    <div
+                        class="bg-green-600 -mx-[10px] mt-6 mb-8 rounded-full h-[15px] w-[15px]"></div>
+                    <div
+                        class="bg-blue-600 mx-[20px] mt-6 mb-8 rounded-full h-[15px] w-[15px]"></div>
+                    <span
+                        class="my-[80px] -mx-[70px] text-pink-500 text-1xl">const
+                        aboutMe = () => {<br>
+                        <span class="mx-[30px] text-blue-500 text-1xl">const
+                            details = {
+                            <br> <span
+                                class="mx-[50px] text-white text-1xl"><span
+                                    class="text-yellow-500">name:</span>
+                                "Aman";</span>
+                            <br> <span
+                                class="mx-[50px] text-white text-1xl"><span
+                                    class="text-yellow-500">age:</span>
+                                21;</span>
+                            <br> <span
+                                class="mx-[50px] text-white text-1xl"><span
+                                    class="text-yellow-500">profession:</span>
+                                "Web Developer"</span>
+                            <br> <span
+                                class="mx-[50px] text-white text-1xl"><span
+                                    class="text-pink-500">technologiesKnown</span>
+                                = {</span>
+                            <br> <span
+                                class="mx-[70px] text-white text-1xl"><span
+                                    class="text-yellow-500">HTML:</span>
+                                "✅";</span>
+                            <br> <span
+                                class="mx-[70px] text-white text-1xl"><span
+                                    class="text-yellow-500">CSS:</span>
+                                "✅";</span>
+                            <br> <span
+                                class="mx-[70px] text-white text-1xl"><span
+                                    class="text-yellow-500">JavaScript:</span>
+                                "✅";</span>
+                            <br> <span
+                                class="mx-[70px] text-white text-1xl"><span
+                                    class="text-yellow-500">TypeScript:</span>
+                                "✅";</span>
+                            <br> <span
+                                class="mx-[70px] text-white text-1xl"><span
+                                    class="text-yellow-500">SQL:</span>
+                                "✅";</span>
+                            <br> <span
+                                class="mx-[70px] text-pink-500 text-1xl">}</span>
+                            <br> <span
+                                class="mx-[50px] text-white text-1xl"><span
+                                    class="text-pink-500">frameworks&Libraries</span>
+                                = {</span>
+                            <br> <span
+                                class="mx-[70px] text-white text-1xl"><span
+                                    class="text-yellow-500">Angular:</span>
+                                "✅";</span>
+                            <br> <span
+                                class="mx-[70px] text-white text-1xl"><span
+                                    class="text-yellow-500">Tailwind CSS:</span>
+                                "✅";</span>
+                            <br> <span
+                                class="mx-[70px] text-white text-1xl"><span
+                                    class="text-yellow-500">Bootstrap:</span>
+                                "✅";</span>
+                            <br> <span
+                                class="mx-[70px] text-white text-1xl"><span
+                                    class="text-yellow-500">GSAP:</span>
+                                "✅";</span>
+                            <br> <span
+                                class="mx-[70px] text-pink-500 text-1xl">}</span>
+                            <br> <span
+                                class="mx-[30px]  text-blue-500 text-1xl">}</span>
+                        </span><br>
+                        }</span>
+                </div>
+            </section>
+            <!-- Skills -->
+            <section>
+                <div class="bg-[#21212e] w-full mt-10 mb-10 py-10">
+                    <p class="text-center text-3xl text-white font-extrabold">🤹
+                        Checkout my <span
+                            class="text-[#793fff]">skills</span></p>
+                    <div class="flex flex-wrap justify-center gap-6 mt-10">
+                        <div
+                            class="bg-[#793fff] shadow-lg h-[250px] w-[300px] rounded-[10px] flex flex-col items-center justify-center">
+                            <i
+                                class="material-icons text-white text-[70px]">language</i>
+                            <p
+                                class="text-white text-2xl text-center mb-4 font-semibold">Web
+                                Design</p>
+                            <p
+                                class="text-white text-1xl text-center text-clip px-5">With
+                                the help of latest technologies, I can develop
+                                modern and beautiful websites.</p>
+                        </div>
+                        <div
+                            class="bg-[#793fff] shadow-lg h-[250px] w-[300px] rounded-[10px] flex flex-col items-center justify-center">
+                            <i
+                                class="material-icons text-white text-[70px]">palette</i>
+                            <p
+                                class="text-white text-2xl text-center mb-4 font-semibold">Graphic
+                                Design</p>
+                            <p
+                                class="text-white text-1xl text-center text-clip px-5">I
+                                can create graphics for your social media and
+                                website.</p>
+                        </div>
+                        <div
+                            class="bg-[#793fff] shadow-lg h-[250px] w-[300px] rounded-[10px] flex flex-col items-center justify-center">
+                            <i
+                                class="material-icons text-white text-[70px]">lightbulb</i>
+                            <p
+                                class="text-white text-2xl text-center mb-4 font-semibold">Smart
+                                Work</p>
+                            <p
+                                class="text-white text-1xl text-center text-clip px-5">Working
+                                hard makes things complex, therefore I try to
+                                work smart.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Experience -->
+            <section>
+                <p
+                    class="my-[50px] text-center text-3xl text-white font-extrabold">📌
+                    My <span class="text-[#793fff]">Experience</span></p>
+                <p
+                    class="text-white text-center -mt-[20px] mb-[40px] px-[5px]">This
+                    timeline summarizes my learnings till the date.</p>
+
+                <div class="flex justify-center">
+                    <ul role="list" class="m-2 max-w-screen-md">
+                        <li
+                            class="group relative flex flex-col pb-8 pl-7 last:pb-0">
+                            <div
+                                class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3"></div>
+                            <div
+                                class="absolute left-0 top-2 h-2 w-2 rounded-full border border-[#793fff] text-[#793fff]"></div>
+                            <h3
+                                class="mt-2 text-sm/6 font-semibold text-white">Intern
+                                at FM Tech</h3>
+                            <p
+                                class="font-display text-2xs/6 order-first font-semibold tracking-[0.2em] text-[#793fff]">
+                                <time datetime="2023-06-20T18:30-04:00">October
+                                    2022</time>
+                                <!-- -->-<!-- -->
+                                <time datetime="2023-06-20T20:00-04:00">January
+                                    2023</time>
+                            </p>
+                            <p class="mt-0.5 text-sm/6 text-white">During my
+                                internship at FM Tech, I gained hands-on
+                                experience with front-end technologies,
+                                primarily focusing on HTML, CSS, and JavaScript.
+                                I collaborated with senior developers, worked on
+                                small-scale projects, and improved my
+                                understanding of web development processes.</p>
+                        </li>
+                        <li
+                            class="group relative flex flex-col pb-8 pl-7 last:pb-0">
+                            <div
+                                class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3"></div>
+                            <div
+                                class="absolute left-0 top-2 h-2 w-2 rounded-full border border-[#793fff] text-[#793fff]"></div>
+                            <h3
+                                class="mt-2 text-sm/6 font-semibold text-white">Junior
+                                Frontend Developer at FM Tech</h3>
+                            <p
+                                class="font-display text-2xs/6 order-first font-semibold tracking-[0.2em] text-[#793fff]">
+                                <time datetime="2023-06-20T18:30-04:00">January
+                                    2023</time>
+                                <!-- -->-<!-- -->
+                                <time datetime="2023-06-20T20:00-04:00">December
+                                    2023</time>
+                            </p>
+                            <p class="mt-0.5 text-sm/6 text-white">As a
+                                Junior Frontend Developer, I contributed to
+                                larger projects and worked closely with
+                                cross-functional teams to deliver responsive,
+                                user-friendly interfaces. My primary
+                                responsibility was developing and maintaining
+                                web applications using Angular, improving my
+                                skills in component-driven development, state
+                                management, and API integration.</p>
+                        </li>
+                        <li
+                            class="group relative flex flex-col pb-8 pl-7 last:pb-0">
+                            <div
+                                class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3"></div>
+                            <div
+                                class="absolute left-0 top-2 h-2 w-2 rounded-full border border-[#793fff] text-[#793fff]"></div>
+                            <h3
+                                class="mt-2 text-sm/6 font-semibold text-white">Angular
+                                Developer at FM Tech</h3>
+                            <p
+                                class="font-display text-2xs/6 order-first font-semibold tracking-[0.2em] text-[#793fff]">
+                                <time datetime="2023-06-20T20:00-04:00">January
+                                    2024
+                                </time>
+                                <!-- -->-<!-- -->
+                                <time
+                                    datetime="2023-06-20T23:00-04:00">Present</time>
+                            </p>
+                            <p class="mt-0.5 text-sm/6 text-white">In my
+                                current role as an Angular Developer, I lead the
+                                development of complex Angular applications,
+                                ensuring best practices and high performance. My
+                                responsibilities include optimizing application
+                                performance, implementing new features, and
+                                mentoring junior team members. I am actively
+                                involved in the architectural design of scalable
+                                front-end solutions, focusing on delivering
+                                efficient and maintainable code.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Projects -->
+
+            <section>
+                <div class="bg-[#21212e] w-full mt-10 mb-10 py-10 flex flex-wrap justify-center">
+                    <p class="w-full text-center text-3xl text-white font-extrabold">🚀
+                        Projects <span class="text-white">Done</span></p>
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 max-w-[1300px] mx-auto">
+
+                        <div class="relative w-full rounded-[10px] overflow-hidden group">
+                            <img src="img/password-generator.png" alt="Password Generator"
+                                 class="select-none h-[180px] w-[320px] rounded-[10px] object-cover">
+                            
+                            <!-- Hover Layer -->
+                            <div class="absolute inset-0 bg-[#793fff] bg-opacity-0 group-hover:bg-opacity-40 duration-300"></div>
+                    
+                            <!-- Text on Hover -->
+                            <p class="absolute -mt-5 inset-0 flex items-center justify-center text-white text-[20px] font-extrabold opacity-0 group-hover:opacity-100 duration-300">
+                                Password Generator
+                            </p>
+                    
+                            <!-- Icon Links -->
+                            <div class="absolute mt-5 inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300 space-x-4">
+                                <a href="https://wowpassgen.netlify.app/" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                         class="bi bi-eye-fill text-white bg-[#793fff] p-[4px] rounded-full"
+                                         viewBox="0 0 16 16">
+                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/ashish-makes/passgen" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                         class="bi bi-github text-white bg-[#793fff] p-[4px] rounded-full"
+                                         viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                              d="M8 0C3.58 0 0 3.58 0 8a8.001 8.001 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 .43-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.09.59 1.24.83.72 1.21 1.87.86 2.33.66.07-.52.28-.86.51-1.06-1.79-.2-3.67-.89-3.67-3.96 0-.88.31-1.6.82-2.16-.08-.2-.36-1.03.08-2.15 0 0 .67-.21 2.2.82a7.54 7.54 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.52-1.04 2.2-.82 2.2-.82.44 1.12.16 1.94.08 2.15.51.56.82 1.28.82 2.16 0 3.08-1.89 3.76-3.68 3.96.29.25.54.75.54 1.51 0 1.09-.01 1.97-.01 2.24 0 .22.15.46.55.38A8.001 8.001 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Services -->
+            <section>
+                <p
+                class="my-[50px] text-center text-3xl text-white font-extrabold">🍬
+                My <span class="text-[#793fff]">Services</span></p>
+
+               <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center mb-[50px] mx-auto 2xl:max-w-[1300px] lg:max-w-[1200px]">
+                <!-- Card 1 -->
+
+                <div class="bg-[#21212e] h-[500px] w-full max-w-[320px] rounded-[10px] outline-dashed outline-[#793fff] outline-[3.5px] mx-auto flex flex-col items-center relative ">
+                    <p class="text-white text-2xl font-extrabold pt-[40px]">Portfolio Website</p>
+                    <img src="img/portfolio-price.png" class="select-none h-[150px] w-[150px] mt-4">
+                    
+                    <div class="mt-6 space-y-4">
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill text-[#793fff] bg-white rounded-full"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                            <p class="ml-3 text-white text-[16px]">Modern UI/UX</p>
+                        </div>
+                
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill text-[#793fff] bg-white rounded-full"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                            <p class="ml-3 text-white text-[16px]">Responsive Design</p>
+                        </div>
+                
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill text-[#793fff] bg-white rounded-full"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                            <p class="ml-3 text-white text-[16px]">Illustrations</p>
+                        </div>
+                
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill text-[#793fff] bg-white rounded-full"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                            <p class="ml-3 text-white text-[16px]">Source Code</p>
+                        </div>
+                    </div>
+                
+                    <button class="bg-[#793fff] text-white !h-10 w-40 rounded-[5px] shadow-lg shadow-[#793fff]/30 mt-8">
+                        <a href="mailto:ashish-makes@gmail.com">Place Order</a>
+                    </button>
+                </div>
+                <div class="bg-[#21212e] h-[500px] w-full max-w-[320px] rounded-[10px] outline-dashed outline-[#793fff] outline-[3.5px] mx-auto flex flex-col items-center relative ">
+                    <p class="text-white text-2xl font-extrabold pt-[40px]">Landing Page</p>
+                    <img src="img/landing-price.png" class="select-none h-[150px] w-[150px] mt-4">
+                    
+                    <div class="mt-6 space-y-4">
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill text-[#793fff] bg-white rounded-full"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                            <p class="ml-3 text-white text-[16px]">Modern UI/UX</p>
+                        </div>
+                
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill text-[#793fff] bg-white rounded-full"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                            <p class="ml-3 text-white text-[16px]">Responsive Design</p>
+                        </div>
+                
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill text-[#793fff] bg-white rounded-full"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                            <p class="ml-3 text-white text-[16px]">Illustrations</p>
+                        </div>
+                
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill text-[#793fff] bg-white rounded-full"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                            <p class="ml-3 text-white text-[16px]">Source Code</p>
+                        </div>
+                    </div>
+                
+                    <button class="bg-[#793fff] text-white !h-10 w-40 rounded-[5px] shadow-lg shadow-[#793fff]/30 mt-8">
+                        <a href="mailto:ashish-makes@gmail.com">Place Order</a>
+                    </button>
+                </div>
+                <div class="bg-[#21212e] h-[500px] w-full max-w-[320px] rounded-[10px] outline-dashed outline-[#793fff] outline-[3.5px] mx-auto flex flex-col items-center relative ">
+                    <p class="text-white text-2xl font-extrabold pt-[40px]">Tools</p>
+                    <img src="img/tools-price.png" class="select-none h-[150px] w-[150px] mt-4">
+                    
+                    <div class="mt-6 space-y-4">
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill text-[#793fff] bg-white rounded-full"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                            <p class="ml-3 text-white text-[16px]">Modern UI/UX</p>
+                        </div>
+                
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill text-[#793fff] bg-white rounded-full"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                            <p class="ml-3 text-white text-[16px]">Responsive Design</p>
+                        </div>
+                
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill text-[#793fff] bg-white rounded-full"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                            <p class="ml-3 text-white text-[16px]">Illustrations</p>
+                        </div>
+                
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-check-circle-fill text-[#793fff] bg-white rounded-full"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                            <p class="ml-3 text-white text-[16px]">Source Code</p>
+                        </div>
+                    </div>
+                
+                    <button class="bg-[#793fff] text-white !h-10 w-40 rounded-[5px] shadow-lg shadow-[#793fff]/30 mt-8">
+                        <a href="mailto:ashish-makes@gmail.com">Place Order</a>
+                    </button>
+                </div>
+                
+            </div>
+            </section>
+            <!-- Contact -->
+            <section>
+                <div class="bg-[#21212e] w-full py-[40px]">
+                  <p class="py-[30px] text-center text-3xl text-white font-extrabold">🎯 Let's 
+                    <span class="text-[#793fff]">Work </span><span>together</span>
+                  </p>
+              
+                  <!-- Name Field -->
+                  <div class="relative px-[20px] sm:px-[60px] mb-[20px] sm:mx-auto sm:max-w-[400px] md:max-w-[600px]">
+                    <input type="text" id="name"
+                      class="name border-2 w-full pl-[10px] border-[#793fff] rounded-[5px] text-white bg-[#21212e] py-2 focus:outline-none focus:border-[#793fff] transition-colors peer"
+                      autocomplete="off" placeholder="Name">
+                  </div>
+              
+                  <!-- Email Field -->
+                  <div class="relative px-[20px] sm:px-[60px] mb-[20px] sm:mx-auto sm:max-w-[400px] md:max-w-[600px]">
+                    <input type="text" id="email"
+                      class="email border-2 w-full pl-[10px] border-[#793fff] rounded-[5px] text-white bg-[#21212e] py-2 focus:outline-none focus:border-[#793fff] transition-colors peer"
+                      autocomplete="off" placeholder="Email">
+                  </div>
+              
+                  <!-- Message Field -->
+                  <div class="relative px-[20px] sm:px-[60px] mb-[20px] sm:mx-auto sm:max-w-[400px] md:max-w-[600px]">
+                    <textarea id="message"
+                      class="message border-2 w-full h-[200px] pl-[10px] border-[#793fff] rounded-[5px] text-white bg-[#21212e] py-2 focus:outline-none focus:border-[#793fff] transition-colors peer resize-none"
+                      autocomplete="off" placeholder="Type your message here..."></textarea>
+                  </div>
+              
+                  <!-- Send Button -->
+                  <div class="relative px-[20px] sm:px-[60px] mb-[20px] sm:mx-auto sm:max-w-[400px] md:max-w-[600px]">
+                    <button
+                      class="send bg-[#793fff] text-white w-full h-10 rounded-[5px] shadow-lg shadow-[#793fff]/30 transition-transform duration-300 hover:scale-105">Send</button>
+                  </div>
+                </div>
+              </section>
+              
+            <!-- Footer -->
+            <section>
+                <div class="w-full mt-5 mb-2">
+                    <div id="socail"
+                        class="flex justify-center items-center gap-2">
+                        <div
+                            class="group">
+                            <a href="https://github.com/Amantatla"  target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                height="30" fill="currentColor" 
+                                class="bi bi-github text-white bg-[#21212e] rounded-full p-2 group-hover:bg-[#793fff] group-hover:text-white cursor-pointer duration-150"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                            </svg>
+                        </a>
+                        </div>
+                        <div
+                            class="group">
+                            <a href="https://www.linkedin.com/in/aman-saeed-b3883b28a/" target="_blank" rel="noopener noreferrer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                     class="bi bi-linkedin text-white bg-[#21212e] rounded-full p-2 group-hover:bg-[#793fff] group-hover:text-white cursor-pointer duration-150"
+                                     viewBox="0 0 16 16">
+                                    <path d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zm4.943 12.248V6.169H3.136v7.225h1.807zm-.905-8.21c.621 0 1.004-.413 1.004-.93-.011-.525-.383-.93-.99-.93-.607 0-.999.405-1.01.93 0 .517.383.93.996.93h.004zM13.306 8.58c0-1.788-.95-2.62-2.216-2.62-1.01 0-1.45.556-1.703.945v-.808H7.58c.024.533 0 7.225 0 7.225h1.807v-4.04c0-.217.016-.434.08-.588.173-.434.568-.884 1.232-.884.87 0 1.217.667 1.217 1.644v3.867h1.807V8.58z"/>
+                                </svg>
+                            </a>                            
+                        </div>
+                    </div>
+                    <p
+                        class="w-full text-white mb-5 text-[13px] sm:text-[16px] text-center mt-2"><i
+                            class="bi bi-c-circle"></i> 2024 All rights
+                        reserved | Designed with 💜 by Aman Tatla</p>
+                </div>
+            </section>
+            <script src="app.js"></script>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+        </div>
+    </body>
+</html>
