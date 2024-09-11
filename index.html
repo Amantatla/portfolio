@@ -19,11 +19,6 @@
                     <span
                         class="-mx-[1px] text-2xl cursor-pointer text-[#793fff] px-[10px]"><b>Aman
                             Tatla</b></span>
-                    <!-- <span
-                        class="text-3xl cursor-pointer text-[#793fff] md:hidden block">
-                        <ion-icon
-                            name="menu-outline"
-                            onclick="Menu(this)"></ion-icon></span> -->
                             <span
                             class="text-3xl cursor-pointer text-[#793fff] md:hidden block">
                             <i class="fa-solid fa-bars" onclick="Menu(this)"></i>
@@ -56,33 +51,77 @@
                 </ul>
             </nav>
             <!-- intro -->
-            <section>
-                <div
-                    class="px-[80px] py-12 bg-[#21212e] 2xl:py-2 xl:py-2 lg:py-2 md:py-2 sm:py-2">
-                    <div
-                        class="mx-[5px] -mt-[30px] h-[250px] w-[250px] sm:h-[220px] sm:w-[220px] sm:mt-[50px] sm:mx-[320px] md:h-[250px] md:w-[250px] md:mt-[50px] md:mx-[410px] lg:h-[250px] lg:w-[250px] lg:mt-[50px] lg:mx-[700px] xl:h-[250px] xl:w-[250px] xl:mt-[50px] xl:mx-[800px] 2xl:h-[250px] 2xl:w-[250px] 2xl:mt-[50px] 2xl:mx-[900px]">
-                        <img src="img/hero-img.png" class="select-none">
+            <!-- <section>
+                <div class="px-6 py-8 sm:px-10 md:px-16 lg:px-24 xl:px-32 2xl:px-40 bg-[#21212e]">
+                    <div class="mx-auto h-[180px] w-[180px] sm:h-[200px] sm:w-[200px] md:h-[220px] md:w-[220px] lg:h-[250px] lg:w-[250px]">
+                        <img src="img/hero-img.png" class="select-none w-full h-full object-cover">
                     </div>
-                    <div
-                        class="mt-5 sm:-mt-[200px] sm:-mx-[30px] md:mx-[10px] lg:mx-[50px] xl:mx-[220px] 2xl:mx-[250px]">
-                        <span class="text-white text-3xl">👋 Hi, I'm <span
-                                class="text-[#793fff] text-3xl font-bold">Aman</span></span>
+            
+                    <div class="mt-5 text-center">
+                        <span class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                            👋 Hi, I'm 
+                            <span class="text-[#793fff] font-bold">Aman</span>
+                        </span>
                     </div>
-                    <div
-                        class="mt-4 text-justify sm:-mx-[30px] md:mx-[10px] lg:mx-[50px] xl:mx-[220px] 2xl:mx-[250px]">
-                        <span class="text-white text-1xl z-50">Well I am a Web
-                            Developer working to<br>make internet a place with
-                            modern sites.<br><span class="font-semibold">Know
-                                more about me below. ⬇️</span></span><br>
+            
+                    <div class="mt-4 text-center sm:text-left sm:px-4 md:px-8 lg:px-16 xl:px-24 2xl:px-32 text-white text-base sm:text-lg md:text-xl lg:text-2xl">
+                        <span>
+                            Well I am a Web Developer working to<br class="hidden sm:block">
+                            make the internet a place with modern sites.<br>
+                            <span class="font-semibold">Know more about me below. ⬇️</span>
+                        </span>
                     </div>
-                    <div
-                        class="mt-4 sm:pb-[50px] sm:-mx-[30px] md:mx-[10px] lg:mx-[50px] xl:mx-[220px] 2xl:mx-[250px]">
-                        <button
-                            class="bg-[#793fff] text-white h-10 w-40 rounded-[5px] shadow-lg shadow-[#793fff]/30">Download
-                            CV</button>
+            
+                    <div class="mt-4 text-center">
+                        <button class="bg-[#793fff] text-white h-10 w-36 sm:w-40 md:w-44 lg:w-48 rounded-md shadow-lg shadow-[#793fff]/30 transition-all duration-300 hover:bg-[#5c2fcc]">
+                            Download CV
+                        </button>
                     </div>
                 </div>
+            </section> -->
+            
+            <section>
+                <div class="w-full px-6 py-8 sm:px-10 md:px-16 lg:px-24 xl:px-32 2xl:px-40 bg-[#21212e] mx-auto">
+                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center !max-w-[1300px] mx-auto">
+                    <!-- Text Content (Left side on larger screens) -->
+                    <div class="lg:w-1/2 order-last md:order-first">
+                        <!-- Introduction Text -->
+                        <div class="mt-5 lg:mt-0 text-center lg:text-left">
+                            <span class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                                👋 Hi, I'm 
+                                <span class="text-[#793fff] font-bold">Aman</span>
+                            </span>
+                        </div>
+            
+                        <!-- Description -->
+                        <div class="mt-4 sm:px-4 md:px-8 lg:px-0 text-white text-base sm:text-lg md:text-xl lg:text-2xl text-center lg:text-left">
+                            <span>
+                                Well I am a Web Developer working to<br class="hidden sm:block">
+                                make the internet a place with modern sites.<br>
+                                <span class="font-semibold">Know more about me below. ⬇️</span>
+                            </span>
+                        </div>
+            
+                        <!-- Button -->
+                        <div class="mt-4 text-center lg:text-left order-1">
+                            <button class="bg-[#793fff] text-white h-10 w-36 sm:w-40 md:w-44 lg:w-48 rounded-md shadow-lg shadow-[#793fff]/30 transition-all duration-300 hover:bg-[#5c2fcc]">
+                                Download CV
+                            </button>
+                        </div>
+                    </div>
+            
+                    <!-- Hero Image (Right side on larger screens) -->
+                    <div class="mt-8 lg:mt-0 lg:w-1/2 flex justify-center lg:justify-end">
+                        <div class="h-[180px] w-[180px] sm:h-[200px] sm:w-[200px] md:h-[220px] md:w-[220px] lg:h-[250px] lg:w-[250px]">
+                            <img src="img/hero-img.png" class="select-none w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                </div>
             </section>
+            
+
             <!-- About -->
             <section>
                 <p
