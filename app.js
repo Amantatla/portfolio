@@ -1,3 +1,4 @@
+gsap.registerPlugin(ScrollTrigger);
 const submit = document.querySelector(".send");
 const email = document.querySelector(".email");
 const message = document.querySelector(".message");
@@ -39,6 +40,7 @@ const reset = () => {
 }
 
 submit.addEventListener("click", sendEmail)
+
 // gsap 
 let tl = gsap.timeline();
 
@@ -56,6 +58,88 @@ tl.from(".menu li", {
     stagger: 0.3
 })
 
+// Animate the paragraph first
+tl.from(".intro p", {
+    opacity: 0,
+    y: 20,
+    duration: 0.3,
+    stagger: 0.3,
+});
+tl.from(".resume", {
+    opacity: 0,
+    y: 20,
+    duration: 0.2,
+});
+tl.from("#intro-img", {
+    scale: 0,
+    y: 20,
+    duration: 0.5
+});
+
+// Heading animation (from bottom)
+gsap.from(".about p.text-center", {
+    opacity: 0,
+    y: 50,
+    duration: 0.5,
+    delay: 0.2,
+    scrollTrigger: {
+        trigger: ".about", // The section that triggers the animation
+        start: "top 80%",  // Start the animation when the section is 80% into the viewport
+        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+    }
+});
+
+// Image animation (from left)
+gsap.from(".about img.select-none", {
+    opacity: 0,
+    x: -100,
+    duration: 1,
+    delay: 0.4,
+    scrollTrigger: {
+        trigger: ".about",
+        start: "top 80%",  // Same trigger point as above
+        toggleActions: "play none none none"
+    }
+});
+
+// Spans animation (from right)
+gsap.from(".about .dots,.about span", {
+    opacity: 0,
+    x: 100,
+    duration: 0.8,
+    delay: 0.6,
+    stagger: 0.1, // Each span animates slightly after the previous one
+    scrollTrigger: {
+        trigger: ".about",
+        start: "top 80%",  // Same trigger point as above
+        toggleActions: "play none none none"
+    }
+});
+
+gsap.from(".skills p", {
+    opacity: 0,
+    y: 50,
+    duration: 0.5,
+    delay: 0.2,
+    scrollTrigger: {
+        trigger: ".skills", // The section that triggers the animation
+        start: "top 80%",  // Start the animation when the section is 80% into the viewport
+        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+    }
+});
+gsap.from(".skills .marquee", {
+    opacity: 0,
+    y: 50,
+    duration: 0.8,
+    delay: 0.6,
+    stagger: 0.1, // Each span animates slightly after the previous one
+    scrollTrigger: {
+        trigger: ".skills",
+        start: "top 80%",  // Same trigger point as above
+        toggleActions: "play none none none"
+    }
+});
+
 // image marque
 const loop = horizontalLoop(".marquee__item", {
     repeat: -1,
@@ -63,20 +147,6 @@ const loop = horizontalLoop(".marquee__item", {
     speed: 0.8
 });
 
-/*
-This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
- 
-Features:
- - Uses xPercent so that even if the widths change (like if the window gets resized), it should still work in most cases.
- - When each item animates to the left or right enough, it will loop back to the other side
- - Optionally pass in a config object with values like "speed" (default: 1, which travels at roughly 100 pixels per second), paused (boolean),  repeat, reversed, and paddingRight.
- - The returned timeline will have the following methods added to it:
-   - next() - animates to the next element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
-   - previous() - animates to the previous element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
-   - toIndex() - pass in a zero-based index value of the element that it should animate to, and optionally pass in a vars object to control duration, easing, etc. Always goes in the shortest direction
-   - current() - returns the current index (if an animation is in-progress, it reflects the final index)
-   - times - an Array of the times on the timeline where each element hits the "starting" spot. There's also a label added accordingly, so "label1" is when the 2nd element reaches the start.
- */
 function horizontalLoop(items, config) {
     items = gsap.utils.toArray(items);
     config = config || {};
@@ -179,3 +249,119 @@ function horizontalLoop(items, config) {
     }
     return tl;
 }
+
+gsap.from(".experience .heading, .detail", {
+    opacity: 0,
+    y: 50,
+    duration: 0.5,
+    delay: 0.2,
+    scrollTrigger: {
+        trigger: ".experience", // The section that triggers the animation
+        start: "top 80%",  // Start the animation when the section is 80% into the viewport
+        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+    }
+});
+gsap.from(".experience ul li", {
+    opacity: 0,
+    x: -100,
+    duration: 0.6,
+    stagger: 1,
+    scrollTrigger: {
+        trigger: ".experience", // The section that triggers the animation
+        start: "top 80%",  // Start the animation when the section is 80% into the viewport
+        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+    }
+});
+gsap.from(".experience .outer", {
+    opacity: 0,
+    x: 100,
+    duration: 0.6,
+    stagger: 1,
+    scrollTrigger: {
+        trigger: ".outer", // The section that triggers the animation
+        start: "top 80%",  // Start the animation when the section is 80% into the viewport
+        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+    }
+});
+
+gsap.from(".project p", {
+    opacity: 0,
+    y: 50,
+    duration: 0.5,
+    delay: 0.2,
+    scrollTrigger: {
+        trigger: ".project", // The section that triggers the animation
+        start: "top 80%",  // Start the animation when the section is 80% into the viewport
+        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+    }
+});
+
+gsap.from(".project .project-card", {
+    opacity: 0,
+    y: 30,
+    duration: 0.6,
+    stagger: .3,
+    scrollTrigger: {
+        trigger: ".project-card", // The section that triggers the animation
+        start: "top 80%",  // Start the animation when the section is 80% into the viewport
+        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+    }
+});
+gsap.from(".service p", {
+    opacity: 0,
+    y: 50,
+    duration: 0.5,
+    delay: 0.2,
+    scrollTrigger: {
+        trigger: ".service", // The section that triggers the animation
+        start: "top 80%",  // Start the animation when the section is 80% into the viewport
+        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+    }
+});
+
+gsap.from(".service .service-card", {
+    opacity: 0,
+    y: 30,
+    duration: 0.6,
+    stagger: .3,
+    scrollTrigger: {
+        trigger: ".service-card", // The section that triggers the animation
+        start: "top 80%",  // Start the animation when the section is 80% into the viewport
+        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+    }
+});
+
+gsap.from(".contact p", {
+    opacity: 0,
+    y: 50,
+    duration: 0.5,
+    delay: 0.2,
+    scrollTrigger: {
+        trigger: ".service", // The section that triggers the animation
+        start: "top 80%",  // Start the animation when the section is 80% into the viewport
+        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+    }
+});
+
+gsap.from(".contact input, .contact textarea, .contact button", {
+    opacity: 0,
+    y: 30,
+    duration: 0.6,
+    stagger: .3,
+    scrollTrigger: {
+        trigger: ".contact", // The section that triggers the animation
+        start: "top 80%",  // Start the animation when the section is 80% into the viewport
+        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+    }
+});
+
+gsap.from(".footer", {
+    scale: 0,
+    duration: 0.5,
+    delay: 0.2,
+    scrollTrigger: {
+        trigger: ".footer", // The section that triggers the animation
+        start: "top 100%",  // Start the animation when the section is 80% into the viewport
+        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+    }
+});

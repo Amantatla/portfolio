@@ -53,26 +53,26 @@
                 <!-- intro -->
                 <div class="w-full px-6 py-8 sm:px-10 md:px-16 lg:px-24 xl:px-32 2xl:px-40 mx-auto">
                     <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center !max-w-[1300px] mx-auto md:h-[calc(100vh-60px)]">
-                        <div class="lg:w-1/2 order-last md:order-first">
+                        <div class="lg:w-1/2 order-last md:order-first intro" >
                             <div class="mt-5 lg:mt-0 text-center lg:text-left">
-                                <span class="text-slate-800 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                                <p class="text-slate-800 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                                     👋 Hi, I'm
                                     <span class="text-teal-500 font-bold">Aman</span>
-                                </span>
+                                </p>
                             </div>
 
                             <div
                                 class="mt-4 sm:px-4 md:px-8 lg:px-0 text-slate-800 text-base sm:text-lg md:text-xl lg:text-2xl text-center lg:text-left">
-                                <span>
+                                <p>
                                     Well I am a Web Developer working to<br class="hidden sm:block">
-                                    make the internet a place with modern sites.<br>
+                                    make the internet a place with modern sites.
                                     <span class="font-semibold">Know more about me below. ⬇️</span>
-                                </span>
+                                </p>
                             </div>
 
                             <div class="mt-4 text-center lg:text-left order-1">
                                 <button
-                                    class="bg-teal-500 font-medium text-white h-10 w-36 sm:w-40 md:w-44 lg:w-48 rounded-md shadow-lg shadow-teal-500/30 transition-all duration-300 hover:bg-[#5c2fcc]">
+                                    class="resume bg-teal-500 font-medium text-white h-10 w-36 sm:w-40 md:w-44 lg:w-48 rounded-md shadow-lg shadow-teal-500/30 transition-all duration-300 hover:bg-teal-600">
                                     Download CV
                                 </button>
                             </div>
@@ -81,7 +81,7 @@
                         <div class="mt-8 lg:mt-0 lg:w-1/2 flex justify-center lg:justify-end">
                             <div
                                 class="h-[180px] w-[180px] sm:h-[200px] sm:w-[200px] md:h-[220px] md:w-[220px] lg:h-[250px] lg:w-[250px]">
-                                <img src="img/hero-img.png" class="select-none w-full h-full object-cover">
+                                <img src="img/hero-img.png" class="select-none w-full h-full object-cover" id="intro-img">
                             </div>
                         </div>
                     </div>
@@ -90,18 +90,18 @@
         </section>
         <!-- About -->
         <section>
-            <div class="relative">
+            <div class="relative about">
                 <p class="my-[50px] text-center text-3xl text-slate-800 font-extrabold">Here's
                     More <span class="text-teal-500">About Me</span></p>
-                <img src="img/about-img.png"
-                    class="select-none invisible h-[0px] w-[0px] absolute md:visible md:h-[350px] md:w-[350px] md:left-[20px] lg:visible lg:h-[400px] lg:w-[400px] lg:left-[20px] xl:visible xl:h-[400px] xl:w-[400px] xl:left-[25px] 2xl:visible 2xl:h-[500px] 2xl:w-[500px] 2xl:left-[50px]">
+                <img src="img/about-teal.png"
+                    class="select-none invisible h-[0px] w-[0px] absolute md:visible md:h-[350px] md:w-[350px] md:left-[20px] lg:visible lg:h-[400px] lg:w-[400px] lg:left-[20px] xl:visible xl:h-[400px] xl:w-[400px] xl:-left-[8px] 2xl:visible 2xl:h-[500px] 2xl:w-[500px] 2xl:left-[50px]">
                 <div class="w-full ">
                     <div
                         class="bg-gray-100 shadow-lg px-5 flex flex-wrap mx-auto mb-8 rounded-[10px] w-full sm:w-[400px] lg:w-[500px] xl:w-[580px] 2xl:w-[600px]">
                         <div class="inline-flex w-full gap-5 mt-5">
-                            <div class="bg-red-600 rounded-full h-[15px] w-[15px]"></div>
-                            <div class="bg-green-600 rounded-full h-[15px] w-[15px]"></div>
-                            <div class="bg-blue-600 rounded-full h-[15px] w-[15px]"></div>
+                            <div class="dots bg-red-600 rounded-full h-[15px] w-[15px]"></div>
+                            <div class="dots bg-green-600 rounded-full h-[15px] w-[15px]"></div>
+                            <div class="dots bg-blue-600 rounded-full h-[15px] w-[15px]"></div>
                         </div>
                         <span class="my-5 text-pink-500 text-xl font-[Poppins]">const
                             aboutMe = () => {<br>
@@ -150,7 +150,7 @@
                                 <br> <span class="mx-[70px] text-pink-500 text-xl">}</span>
                                 <br> <span class="mx-[30px]  text-blue-500 text-xl">}</span>
                             </span><br>
-                            }
+                          <span> }</span> 
                         </span>
                     </div>
 
@@ -160,7 +160,7 @@
         </section>
         <!-- Skills -->
         <section>
-            <div class="bg-gray-100 w-full mt-10 mb-10 py-10">
+            <div class="bg-gray-100 w-full mt-10 mb-10 py-10 skills">
                 <p class="text-center text-3xl text-slate-800 font-extrabold">🤹
                     Checkout my <span class="text-teal-500">skills</span></p>
                 <div
@@ -209,12 +209,12 @@
     </section>
 
     <!-- Experience -->
-    <section class="max-w-[1300px] mx-auto">
-        <p class="my-[50px] text-center text-3xl text-slate-800 font-extrabold">📌
+    <section class="max-w-[1300px] mx-auto md:px-10 experience">
+        <p class="my-[50px] text-center text-3xl text-slate-800 font-extrabold heading">📌
             My <span class="text-teal-500">Experience</span></p>
-            <p class="text-slate-800 text-center -mt-[20px] mb-[40px] px-[5px]">This
+            <p class="text-slate-800 text-center -mt-[20px] mb-[40px] px-[5px] detail">This
                 timeline summarizes my learnings till the date.</p>
-            <div class="flex flex-row justify-between">  
+            <div class="flex flex-col lg:flex-row justify-between">  
     
             <div class="flex justify-center">
                 <ul role="list" class="m-2 max-w-screen-md">
@@ -291,7 +291,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="flex flex-col justify-between">
+            <div class="flex flex-col md:flex-row lg:flex-col justify-center items-center gap-5 mt-5">
                 <div class="outer">
                     <div class="dot"></div>
                     <div class="card">
@@ -324,11 +324,11 @@
     <!-- Projects -->
 
     <section>
-        <div class="bg-gray-100 w-full mt-10 mb-10 py-10 flex flex-wrap justify-center">
+        <div class="bg-gray-100 w-full mt-10 mb-10 py-10 flex flex-wrap justify-center project">
             <p class="w-full text-center text-3xl text-slate-800 font-extrabold">🚀
                 Projects <span class="text-slate-800">Done</span></p>
             <div class="flex flex-wrap justify-center items-center gap-6 mt-10 max-w-[1300px] mx-auto">
-                <div class="relative h-[180px] w-[320px] rounded-[10px] overflow-hidden group">
+                <div class="project-card relative h-[180px] w-[320px] rounded-[10px] overflow-hidden group">
                     <img src="img/AtTech.png" alt="Password Generator"
                         class="select-none h-[180px] w-[320px] rounded-[10px] object-cover">
 
@@ -363,7 +363,7 @@
                     </div>
                 </div>
 
-                <div class="relative h-[180px] w-[320px] rounded-[10px] overflow-hidden group">
+                <div class="project-card relative h-[180px] w-[320px] rounded-[10px] overflow-hidden group">
                     <img src="img/ecommerce.jpeg" alt="Password Generator"
                         class="select-none h-[180px] w-[320px] rounded-[10px] object-cover">
                     <!-- Hover Layer -->
@@ -395,7 +395,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="relative h-[180px] w-[320px] rounded-[10px] overflow-hidden group">
+                <div class="project-card relative h-[180px] w-[320px] rounded-[10px] overflow-hidden group">
                     <img src="img/ecommerce.jpeg" alt="Password Generator"
                         class="select-none h-[180px] w-[320px] rounded-[10px] object-cover">
                     <!-- Hover Layer -->
@@ -434,14 +434,14 @@
     <!-- Services -->
 
     <section>
-        <div class="w-full py-10">
+        <div class="w-full py-10 service">
             <p class="text-center text-3xl text-slate-800 font-extrabold">🍬
                 <span class="text-teal-500">Services</span> I Offer
             </p>
             <div class="flex flex-wrap justify-center items-center gap-6 mt-10 max-w-[1300px] mx-auto px-5 2xl:px-0">
                 <!-- Frontend Development -->
                 <div
-                    class="w-[350px] bg-teal-500 shadow-lg rounded-[10px] drop-shadow-lg hover:drop-shadow-xl hover:shadow-teal-500 flex flex-col items-center justify-center p-5">
+                    class="service-card w-[350px] bg-teal-500 shadow-lg rounded-[10px] drop-shadow-lg hover:drop-shadow-xl hover:shadow-teal-500 flex flex-col items-center justify-center p-5">
                     <i class="material-icons text-white text-[70px]">code</i>
                     <p class="text-white text-2xl text-center mb-4 font-semibold">Frontend Development</p>
                     <p class="text-white text-base font-medium text-center md:text-center px-5">I build modern,
@@ -451,7 +451,7 @@
 
                 <!-- Web Development -->
                 <div
-                    class="w-[350px] bg-teal-500 shadow-lg rounded-[10px] hover:drop-shadow-xl hover:shadow-teal-500 flex flex-col items-center justify-center p-5">
+                    class="service-card w-[350px] bg-teal-500 shadow-lg rounded-[10px] hover:drop-shadow-xl hover:shadow-teal-500 flex flex-col items-center justify-center p-5">
                     <i class="material-icons text-white text-[70px]">web</i>
                     <p class="text-white text-2xl text-center mb-4 font-semibold">Web Development</p>
                     <p class="text-white text-base font-medium text-center md:text-center px-5">Developing scalable
@@ -461,7 +461,7 @@
 
                 <!-- State Management -->
                 <div
-                    class="w-[350px] bg-teal-500 shadow-lg rounded-[10px] hover:drop-shadow-xl hover:shadow-teal-500 flex flex-col items-center justify-center p-5">
+                    class="service-card w-[350px] bg-teal-500 shadow-lg rounded-[10px] hover:drop-shadow-xl hover:shadow-teal-500 flex flex-col items-center justify-center p-5">
                     <i class="material-icons text-white text-[70px]">sync_alt</i>
                     <p class="text-white text-2xl text-center mb-4 font-semibold">State Management</p>
                     <p class="text-white text-base font-medium text-center md:text-center px-5">Using NgRx for managing
@@ -471,7 +471,7 @@
 
                 <!-- Database Management -->
                 <div
-                    class="w-[350px] bg-teal-500 shadow-lg rounded-[10px] hover:drop-shadow-xl hover:shadow-teal-500 flex flex-col items-center justify-center p-5">
+                    class="service-card w-[350px] bg-teal-500 shadow-lg rounded-[10px] hover:drop-shadow-xl hover:shadow-teal-500 flex flex-col items-center justify-center p-5">
                     <i class="material-icons text-white text-[70px]">storage</i>
                     <p class="text-white text-2xl text-center mb-4 font-semibold">Database Management</p>
                     <p class="text-white text-base font-medium text-center md:text-center px-5">Expertise in handling
@@ -481,7 +481,7 @@
 
                 <!-- UI/UX Implementation -->
                 <div
-                    class="w-[350px] bg-teal-500 shadow-lg rounded-[10px] hover:drop-shadow-xl hover:shadow-teal-500 flex flex-col items-center justify-center p-5">
+                    class="service-card w-[350px] bg-teal-500 shadow-lg rounded-[10px] hover:drop-shadow-xl hover:shadow-teal-500 flex flex-col items-center justify-center p-5">
                     <i class="material-icons text-white text-[70px]">design_services</i>
                     <p class="text-white text-2xl text-center mb-4 font-semibold">UI/UX Implementation</p>
                     <p class="text-white text-base font-medium text-center md:text-center px-5">Translating design
@@ -495,7 +495,7 @@
 
     <!-- Contact -->
     <section>
-        <div class="bg-gray-100 w-full py-10">
+        <div class="bg-gray-100 w-full py-10 contact">
             <p class="py-[30px] text-center text-3xl text-slate-800 font-extrabold">🎯 Let's
                 <span class="text-teal-500">Work </span><span>together</span>
             </p>
@@ -530,12 +530,12 @@
     </section>
     <!-- Footer -->
     <section>
-        <div class="w-full mt-5 mb-2">
+        <div class="w-full mt-5 mb-2 footer">
             <div id="socail" class="flex justify-center items-center gap-2">
                 <div class="group">
                     <a href="https://github.com/Amantatla" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-github text-slate-800 bg-gray-100 rounded-full p-2 group-hover:bg-teal-500 group-hover:text-slate-800 cursor-pointer duration-150"
+                            class="bi bi-github text-teal-500 bg-gray-100 rounded-full p-2 group-hover:bg-teal-500 group-hover:text-white cursor-pointer duration-150"
                             viewBox="0 0 16 16">
                             <path
                                 d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
@@ -546,7 +546,7 @@
                     <a href="https://www.linkedin.com/in/aman-saeed-b3883b28a/" target="_blank"
                         rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-linkedin text-slate-800 bg-gray-100 rounded-full p-2 group-hover:bg-teal-500 group-hover:text-slate-800 cursor-pointer duration-150"
+                            class="bi bi-linkedin text-teal-500 bg-gray-100 rounded-full p-2 group-hover:bg-teal-500 group-hover:text-white cursor-pointer duration-150"
                             viewBox="0 0 16 16">
                             <path
                                 d="M0 1.146C0 .513.324 0 .725 0h14.55c.4 0 .725.513.725 1.146v13.708c0 .633-.324 1.146-.725 1.146H.725A.723.723 0 0 1 0 14.854V1.146zm4.943 12.248V6.169H3.136v7.225h1.807zm-.905-8.21c.621 0 1.004-.413 1.004-.93-.011-.525-.383-.93-.99-.93-.607 0-.999.405-1.01.93 0 .517.383.93.996.93h.004zM13.306 8.58c0-1.788-.95-2.62-2.216-2.62-1.01 0-1.45.556-1.703.945v-.808H7.58c.024.533 0 7.225 0 7.225h1.807v-4.04c0-.217.016-.434.08-.588.173-.434.568-.884 1.232-.884.87 0 1.217.667 1.217 1.644v3.867h1.807V8.58z" />
@@ -556,7 +556,7 @@
             </div>
             <p class="w-full text-slate-800 mb-5 text-[13px] sm:text-[16px] text-center mt-2"><i class="bi bi-c-circle"></i>
                 2024 All rights
-                reserved | Designed with 💜 by Aman Tatla</p>
+                reserved | Designed with 💚 by Aman Tatla</p>
         </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
