@@ -1,49 +1,78 @@
 gsap.registerPlugin(ScrollTrigger);
-const submit = document.querySelector(".send");
-const email = document.querySelector(".email");
-const message = document.querySelector(".message");
-const Name = document.querySelector(".name");
 
 window.onload = function () {
-    window.scrollTo(0, 0);  // Scroll to top of the page
-};
-
-function Menu(e) {
-    let list = document.querySelector('ul');
-    e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
-}
-
-window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
 
-const sendEmail = () => {
+// small screen menu 
+document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.getElementById('bars');
+    const menu = document.querySelector('ul');
+    const menuItems = document.querySelectorAll('.menu a');
+
+    menuIcon.addEventListener("click", (e) => {
+        toggleMenu(e.target);
+    });
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            closeMenu();
+        });
+    });
+
+    function toggleMenu(target) {
+        if (target.getAttribute('data-state') === 'menu') {
+            target.classList.remove('fa-bars');
+            target.classList.add('fa-times');
+            target.setAttribute('data-state', 'close');
+            menu.classList.add('top-[80px]', 'opacity-100');
+        } else {
+            closeMenu();
+        }
+    }
+
+    function closeMenu() {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+        menuIcon.setAttribute('data-state', 'menu');
+        menu.classList.remove('top-[80px]', 'opacity-100');
+    }
+});
+
+// Send Email
+function sendMail() {
+
+    const fname = document.getElementById("fname");
+    const lname = document.getElementById("lname");
+    const email = document.getElementById("email");
+    const subject = document.getElementById("subject");
+
+    let ebody = `
+    <b> First name: </b> ${fname.value}
+    <br/>
+    <b> Last name: </b> ${lname.value}
+    <br/>
+    <b> Email: </b> ${email.value}
+    <br/>
+    <b> Description: </b> ${subject.value}
+    `
+    console.log(ebody)
     Email.send({
-        SecureToken: "YOUR_SECURE_TOKEN",
-        Host: "smtp.elasticemail.com",
-        Username: "amantatla312@gmail.com",
-        Password: "YOUR_PASSWORD",
-        To: 'amantatla312@gmail.com',
-        From: email.value,
-        Subject: "Email from Portfolio",
-        Body: message.value
+        SecureToken: "0a118199-02fc-4a26-885b-3159ad5007ea",
+        To: "amantatla312@gmail.com",
+        From: "amantatla312@gmail.com",
+        Subject: "Enquiry",
+        Body: 'this is body'
     }).then(
         message => alert(message)
     );
-    reset()
 }
 
-const reset = () => {
-    Name.value = ''
-    email.value = ''
-    message.value = ''
-}
 
-submit.addEventListener("click", sendEmail)
 
 // gsap 
 let tl = gsap.timeline();
-
+// navbar
 tl.from(".name .item", {
     opacity: 0,
     y: -20,
@@ -58,38 +87,39 @@ tl.from(".menu li", {
     stagger: 0.3
 })
 
-// Animate the paragraph first
+// home
 tl.from(".intro p", {
     opacity: 0,
     y: 20,
     duration: 0.3,
     stagger: 0.3,
 });
-tl.from(".resume", {
+tl.from(".intro .resume", {
     opacity: 0,
     y: 20,
-    duration: 0.2,
+    duration: 0.5,
+    clearProps: "opacity,transform",
 });
-tl.from("#intro-img", {
-    scale: 0,
-    y: 20,
-    duration: 0.5
-});
+tl.fromTo(
+    ".intro-img img",
+    { scale: 0, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 0.5, stagger: 0.3 }
+);
 
-// Heading animation (from bottom)
+
+// about
 gsap.from(".about p.text-center", {
     opacity: 0,
     y: 50,
     duration: 0.5,
     delay: 0.2,
     scrollTrigger: {
-        trigger: ".about", // The section that triggers the animation
-        start: "top 80%",  // Start the animation when the section is 80% into the viewport
-        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+        trigger: ".about",
+        start: "top 80%",
+        toggleActions: "play none none none"
     }
 });
 
-// Image animation (from left)
 gsap.from(".about img.select-none", {
     opacity: 0,
     x: -100,
@@ -97,50 +127,48 @@ gsap.from(".about img.select-none", {
     delay: 0.4,
     scrollTrigger: {
         trigger: ".about",
-        start: "top 80%",  // Same trigger point as above
+        start: "top 80%",
         toggleActions: "play none none none"
     }
 });
 
-// Spans animation (from right)
 gsap.from(".about .dots,.about span", {
     opacity: 0,
     x: 100,
     duration: 0.8,
     delay: 0.6,
-    stagger: 0.1, // Each span animates slightly after the previous one
+    stagger: 0.1,
     scrollTrigger: {
         trigger: ".about",
-        start: "top 80%",  // Same trigger point as above
+        start: "top 80%",
         toggleActions: "play none none none"
     }
 });
 
+// skills
 gsap.from(".skills p", {
     opacity: 0,
     y: 50,
     duration: 0.5,
     delay: 0.2,
     scrollTrigger: {
-        trigger: ".skills", // The section that triggers the animation
-        start: "top 80%",  // Start the animation when the section is 80% into the viewport
-        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+        trigger: ".skills",
+        start: "top 80%",
+        toggleActions: "play none none none"
     }
 });
 gsap.from(".skills .marquee", {
-    opacity: 0,
-    y: 50,
-    duration: 0.8,
+    scale: 0,
+    duration: 1,
     delay: 0.6,
-    stagger: 0.1, // Each span animates slightly after the previous one
     scrollTrigger: {
         trigger: ".skills",
-        start: "top 80%",  // Same trigger point as above
+        start: "top 80%",
         toggleActions: "play none none none"
     }
 });
 
-// image marque
+// image infinite carousel
 const loop = horizontalLoop(".marquee__item", {
     repeat: -1,
     paused: false,
@@ -163,7 +191,7 @@ function horizontalLoop(items, config) {
         xPercents = [],
         curIndex = 0,
         pixelsPerSecond = (config.speed || 1) * 100,
-        snap = config.snap === false ? (v) => v : gsap.utils.snap(config.snap || 1), // some browsers shift by a pixel to accommodate flex layouts, so for example if width is 20% the first element's width might be 242px, and the next 243px, alternating back and forth. So we snap to 5 percentage points to make things look more natural
+        snap = config.snap === false ? (v) => v : gsap.utils.snap(config.snap || 1),
         totalWidth,
         curX,
         distanceToStart,
@@ -171,7 +199,6 @@ function horizontalLoop(items, config) {
         item,
         i;
     gsap.set(items, {
-        // convert "x" to "xPercent" to make things responsive, and populate the widths/xPercents Arrays to make lookups faster.
 
         xPercent: (i, el) => {
             let w = (widths[i] = parseFloat(gsap.getProperty(el, "width", "px")));
@@ -225,11 +252,10 @@ function horizontalLoop(items, config) {
     function toIndex(index, vars) {
         vars = vars || {};
         Math.abs(index - curIndex) > length / 2 &&
-            (index += index > curIndex ? -length : length); // always go in the shortest direction
+            (index += index > curIndex ? -length : length);
         let newIndex = gsap.utils.wrap(0, length, index),
             time = times[newIndex];
         if (time > tl.time() !== index > curIndex) {
-            // if we're wrapping the timeline's playhead, make the proper adjustments
             vars.modifiers = { time: gsap.utils.wrap(0, tl.duration()) };
             time += tl.duration() * (index > curIndex ? 1 : -1);
         }
@@ -242,7 +268,7 @@ function horizontalLoop(items, config) {
     tl.current = () => curIndex;
     tl.toIndex = (index, vars) => toIndex(index, vars);
     tl.times = times;
-    tl.progress(1, true).progress(0, true); // pre-render for performance
+    tl.progress(1, true).progress(0, true);
     if (config.reversed) {
         tl.vars.onReverseComplete();
         tl.reverse();
@@ -250,49 +276,53 @@ function horizontalLoop(items, config) {
     return tl;
 }
 
+// experience
 gsap.from(".experience .heading, .detail", {
     opacity: 0,
     y: 50,
     duration: 0.5,
     delay: 0.2,
     scrollTrigger: {
-        trigger: ".experience", // The section that triggers the animation
-        start: "top 80%",  // Start the animation when the section is 80% into the viewport
-        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+        trigger: ".experience",
+        start: "top 80%",
+        toggleActions: "play none none none"
     }
 });
+
 gsap.from(".experience ul li", {
     opacity: 0,
     x: -100,
     duration: 0.6,
-    stagger: 1,
+    stagger: .5,
     scrollTrigger: {
-        trigger: ".experience", // The section that triggers the animation
-        start: "top 80%",  // Start the animation when the section is 80% into the viewport
-        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+        trigger: ".experience",
+        start: "top 80%",
+        toggleActions: "play none none none"
     }
 });
+
 gsap.from(".experience .outer", {
     opacity: 0,
     x: 100,
     duration: 0.6,
     stagger: 1,
     scrollTrigger: {
-        trigger: ".outer", // The section that triggers the animation
-        start: "top 80%",  // Start the animation when the section is 80% into the viewport
-        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+        trigger: ".outer",
+        start: "top 80%",
+        toggleActions: "play none none none"
     }
 });
 
+// project
 gsap.from(".project p", {
     opacity: 0,
     y: 50,
     duration: 0.5,
     delay: 0.2,
     scrollTrigger: {
-        trigger: ".project", // The section that triggers the animation
-        start: "top 80%",  // Start the animation when the section is 80% into the viewport
-        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+        trigger: ".project",
+        start: "top 80%",
+        toggleActions: "play none none none"
     }
 });
 
@@ -302,20 +332,22 @@ gsap.from(".project .project-card", {
     duration: 0.6,
     stagger: .3,
     scrollTrigger: {
-        trigger: ".project-card", // The section that triggers the animation
-        start: "top 80%",  // Start the animation when the section is 80% into the viewport
-        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+        trigger: ".project-card",
+        start: "top 80%",
+        toggleActions: "play none none none"
     }
 });
+
+// service
 gsap.from(".service p", {
     opacity: 0,
     y: 50,
     duration: 0.5,
     delay: 0.2,
     scrollTrigger: {
-        trigger: ".service", // The section that triggers the animation
-        start: "top 80%",  // Start the animation when the section is 80% into the viewport
-        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+        trigger: ".service",
+        start: "top 80%",
+        toggleActions: "play none none none"
     }
 });
 
@@ -325,43 +357,46 @@ gsap.from(".service .service-card", {
     duration: 0.6,
     stagger: .3,
     scrollTrigger: {
-        trigger: ".service-card", // The section that triggers the animation
-        start: "top 80%",  // Start the animation when the section is 80% into the viewport
-        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+        trigger: ".service-card",
+        start: "top 80%",
+        toggleActions: "play none none none"
     }
 });
 
+// contact
 gsap.from(".contact p", {
     opacity: 0,
     y: 50,
     duration: 0.5,
     delay: 0.2,
     scrollTrigger: {
-        trigger: ".service", // The section that triggers the animation
-        start: "top 80%",  // Start the animation when the section is 80% into the viewport
-        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+        trigger: ".service",
+        start: "top 80%",
+        toggleActions: "play none none none"
     }
 });
 
+// contact
 gsap.from(".contact input, .contact textarea, .contact button", {
     opacity: 0,
     y: 30,
     duration: 0.6,
     stagger: .3,
     scrollTrigger: {
-        trigger: ".contact", // The section that triggers the animation
-        start: "top 80%",  // Start the animation when the section is 80% into the viewport
-        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+        trigger: ".contact",
+        start: "top 80%",
+        toggleActions: "play none none none"
     }
 });
 
+// footer
 gsap.from(".footer", {
     scale: 0,
     duration: 0.5,
     delay: 0.2,
     scrollTrigger: {
-        trigger: ".footer", // The section that triggers the animation
-        start: "top 100%",  // Start the animation when the section is 80% into the viewport
-        toggleActions: "play none none none"  // Play the animation when it enters the viewport
+        trigger: ".footer",
+        start: "top 100%",
+        toggleActions: "play none none none"
     }
 });

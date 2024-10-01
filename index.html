@@ -9,87 +9,84 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body class="overflow-x-hidden">
     <div class="w-full bg-[#fff]">
-        <section class="h-[100vh]">
+        <section class="min-h-[100vh]" id="home">
             <div class="w-full h-full bg-gray-100">
                 <nav class="py-3 px-10 md:flex md:items-center md:justify-between md:h-[60px]">
                     <div class="name flex items-center justify-between my-2">
-                        <img src="img/hero-img.png" class="item select-none h-[40px] w-[40px]">
+                        <!-- <img src="img/hero-img.png" class="item select-none h-[40px] w-[40px]"> -->
                         <span class="item -mx-[1px] text-2xl cursor-pointer text-teal-500 px-[10px]"><b>Aman
                                 Tatla</b></span>
                         <span class="item text-3xl cursor-pointer text-teal-500 md:hidden block">
-                            <i class="fa-solid fa-bars" onclick="Menu(this)"></i>
+                            <i class="fa-solid fa-bars" id="bars" data-state="menu"></i>
                         </span>
                     </div>
                     <ul
-                        class="menu md:flex md:items-center md:z-auto md:static bg-gray-100 absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-                        <!--z-[-1]-->
+                        class="menu md:flex md:items-center md:z-auto md:static bg-gray-100/60 md:bg-transparent backdrop-blur-md md:backdrop-blur-none absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 z-20">
                         <li class="mx-4 my-4 md:my-0">
-                            <a href="#" class="text-slate-800 hover:text-teal-500 duration-500">Home</a>
+                            <a href="#home" class="text-slate-800 hover:text-teal-500 duration-500">Home</a>
                         </li>
                         <li class="mx-4 my-4 md:my-0">
-                            <a href="#" class="text-slate-800 hover:text-teal-500 duration-500">About</a>
+                            <a href="#about" class="text-slate-800 hover:text-teal-500 duration-500"
+                                onclick="close()">About</a>
                         </li>
                         <li class="mx-4 my-4 md:my-0">
-                            <a href="#" class="text-slate-800 hover:text-teal-500 duration-500">Experience</a>
+                            <a href="#experience" class="text-slate-800 hover:text-teal-500 duration-500">Experience</a>
                         </li>
                         <li class="mx-4 my-4 md:my-0">
-                            <a href="#" class="text-slate-800 hover:text-teal-500 duration-500">Projects</a>
+                            <a href="#projects" class="text-slate-800 hover:text-teal-500 duration-500">Projects</a>
                         </li>
                         <li class="mx-4 my-4 md:my-0">
-                            <button
-                                class="bg-teal-500 font-medium shadow-lg shadow-teal-500/30 text-white h-8 w-32 rounded-[5px]">👋
-                                Contact</button>
+                            <a href="#contact"
+                                class="bg-teal-500 font-medium shadow-lg shadow-teal-500/30 text-white rounded-[5px] px-2 py-1">👋Contact</a>
                         </li>
                     </ul>
                 </nav>
                 <!-- intro -->
-                <div class="w-full px-6 py-8 sm:px-10 md:px-16 lg:px-24 xl:px-32 2xl:px-40 mx-auto">
-                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center !max-w-[1300px] mx-auto md:h-[calc(100vh-60px)]">
-                        <div class="lg:w-1/2 order-last md:order-first intro" >
-                            <div class="mt-5 lg:mt-0 text-center lg:text-left">
-                                <p class="text-slate-800 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-                                    👋 Hi, I'm
-                                    <span class="text-teal-500 font-bold">Aman</span>
+                <section class="pt-10 overflow-hidden bg-gray-100 md:pt-0 sm:pt-16 2xl:pt-16">
+                    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+                        <div class="grid items-center grid-cols-1 md:grid-cols-2">
+                            <div class="intro">
+                                <p
+                                    class="font-bold leading-tight text-slate-800 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center md:text-left">
+                                    Hey<span class="waving-hand">👋</span>I am <br class="block sm:hidden" />Aman Saeed
                                 </p>
+                                <p
+                                    class="mt-3 leading-relaxed text-gray-600 md:mt-8 text-center md:text-left text-base sm:text-lg md:text-xl lg:text-2xl">
+                                    I am a Frontend developer with over a year of experience, specializing in building
+                                    dynamic web applications. Currently working at FM Tech, I have developed expertise
+                                    in Angular, TypeScript, and Tailwind CSS. Check out my resume to learn more about
+                                    me.</p>
+                                <div class="text-center md:text-left">
+                                    <button href="#" title=""
+                                        class="resume mt-4 text-xl md:mt-8 bg-teal-500 font-medium text-white h-10 w-36 sm:w-40 md:w-44 lg:w-48 rounded-md shadow-lg shadow-teal-500/30 transition-all duration-300 hover:bg-teal-600">Download
+                                        CV</button>
+                                </div>
+
                             </div>
 
-                            <div
-                                class="mt-4 sm:px-4 md:px-8 lg:px-0 text-slate-800 text-base sm:text-lg md:text-xl lg:text-2xl text-center lg:text-left">
-                                <p>
-                                    Well I am a Web Developer working to<br class="hidden sm:block">
-                                    make the internet a place with modern sites.
-                                    <span class="font-semibold">Know more about me below. ⬇️</span>
-                                </p>
-                            </div>
+                            <div class="relative intro-img">
+                                <img class="absolute inset-x-0 bottom-0 -mb-48 -translate-x-1/2 left-1/2"
+                                    src="img/blob.svg" alt="" />
 
-                            <div class="mt-4 text-center lg:text-left order-1">
-                                <button
-                                    class="resume bg-teal-500 font-medium text-white h-10 w-36 sm:w-40 md:w-44 lg:w-48 rounded-md shadow-lg shadow-teal-500/30 transition-all duration-300 hover:bg-teal-600">
-                                    Download CV
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="mt-8 lg:mt-0 lg:w-1/2 flex justify-center lg:justify-end">
-                            <div
-                                class="h-[180px] w-[180px] sm:h-[200px] sm:w-[200px] md:h-[220px] md:w-[220px] lg:h-[250px] lg:w-[250px]">
-                                <img src="img/hero-img.png" class="select-none w-full h-full object-cover" id="intro-img">
+                                <img class="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110"
+                                    src="img/heroimg.png" alt="" />
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
+
             </div>
         </section>
         <!-- About -->
-        <section>
+        <section id="about">
             <div class="relative about">
                 <p class="my-[50px] text-center text-3xl text-slate-800 font-extrabold">Here's
                     More <span class="text-teal-500">About Me</span></p>
@@ -138,7 +135,8 @@
                                 <br> <span class="mx-[70px] text-slate-800 text-xl"><span
                                         class="text-yellow-500">Angular:</span>
                                     "✅",</span>
-                                <br> <span class="mx-[70px] text-slate-800 text-xl"><span class="text-yellow-500">Tailwind
+                                <br> <span class="mx-[70px] text-slate-800 text-xl"><span
+                                        class="text-yellow-500">Tailwind
                                         CSS:</span>
                                     "✅",</span>
                                 <br> <span class="mx-[70px] text-slate-800 text-xl"><span
@@ -150,7 +148,7 @@
                                 <br> <span class="mx-[70px] text-pink-500 text-xl">}</span>
                                 <br> <span class="mx-[30px]  text-blue-500 text-xl">}</span>
                             </span><br>
-                          <span> }</span> 
+                            <span> }</span>
                         </span>
                     </div>
 
@@ -159,7 +157,7 @@
 
         </section>
         <!-- Skills -->
-        <section>
+        <section id="skills">
             <div class="bg-gray-100 w-full mt-10 mb-10 py-10 skills">
                 <p class="text-center text-3xl text-slate-800 font-extrabold">🤹
                     Checkout my <span class="text-teal-500">skills</span></p>
@@ -209,17 +207,18 @@
     </section>
 
     <!-- Experience -->
-    <section class="max-w-[1300px] mx-auto md:px-10 experience">
+    <section id="experience" class="max-w-[1300px] mx-auto md:px-10 experience">
         <p class="my-[50px] text-center text-3xl text-slate-800 font-extrabold heading">📌
             My <span class="text-teal-500">Experience</span></p>
-            <p class="text-slate-800 text-center -mt-[20px] mb-[40px] px-[5px] detail">This
-                timeline summarizes my learnings till the date.</p>
-            <div class="flex flex-col lg:flex-row justify-between">  
-    
+        <p class="text-slate-800 text-center -mt-[20px] mb-[40px] px-[5px] detail">This
+            timeline summarizes my learnings till the date.</p>
+        <div class="flex flex-col lg:flex-row justify-between">
+
             <div class="flex justify-center">
                 <ul role="list" class="m-2 max-w-screen-md">
                     <li class="group relative flex flex-col pb-8 pl-7 last:pb-0">
-                        <div class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3">
+                        <div
+                            class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3">
                         </div>
                         <div class="absolute left-0 top-2 h-2 w-2 rounded-full border border-teal-500 text-teal-500">
                         </div>
@@ -241,7 +240,8 @@
                             understanding of web development processes.</p>
                     </li>
                     <li class="group relative flex flex-col pb-8 pl-7 last:pb-0">
-                        <div class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3">
+                        <div
+                            class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3">
                         </div>
                         <div class="absolute left-0 top-2 h-2 w-2 rounded-full border border-teal-500 text-teal-500">
                         </div>
@@ -265,7 +265,8 @@
                             management, and API integration.</p>
                     </li>
                     <li class="group relative flex flex-col pb-8 pl-7 last:pb-0">
-                        <div class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3">
+                        <div
+                            class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3">
                         </div>
                         <div class="absolute left-0 top-2 h-2 w-2 rounded-full border border-teal-500 text-teal-500">
                         </div>
@@ -295,38 +296,39 @@
                 <div class="outer">
                     <div class="dot"></div>
                     <div class="card">
-                      <div class="ray"></div>
-                      <div class="text">12</div>
-                      <div>Project Done</div>
-                      <div class="line topl"></div>
-                      <div class="line leftl"></div>
-                      <div class="line bottoml"></div>
-                      <div class="line rightl"></div>
+                        <div class="ray"></div>
+                        <div class="text">12</div>
+                        <div>Project Done</div>
+                        <div class="line topl"></div>
+                        <div class="line leftl"></div>
+                        <div class="line bottoml"></div>
+                        <div class="line rightl"></div>
                     </div>
-                  </div>
+                </div>
                 <div class="outer">
                     <div class="dot"></div>
                     <div class="card">
-                      <div class="ray"></div>
-                      <div class="text">2 Year</div>
-                      <div>Experience</div>
-                      <div class="line topl"></div>
-                      <div class="line leftl"></div>
-                      <div class="line bottoml"></div>
-                      <div class="line rightl"></div>
+                        <div class="ray"></div>
+                        <div class="text">2 Year</div>
+                        <div>Experience</div>
+                        <div class="line topl"></div>
+                        <div class="line leftl"></div>
+                        <div class="line bottoml"></div>
+                        <div class="line rightl"></div>
                     </div>
-                  </div>
-                  
+                </div>
+
             </div>
-            </div>
-      
+        </div>
+
     </section>
     <!-- Projects -->
 
-    <section>
+    <section id="projects">
         <div class="bg-gray-100 w-full mt-10 mb-10 py-10 flex flex-wrap justify-center project">
             <p class="w-full text-center text-3xl text-slate-800 font-extrabold">🚀
-                Projects <span class="text-slate-800">Done</span></p>
+                <span class="text-teal-500">Projects </span>Done
+            </p>
             <div class="flex flex-wrap justify-center items-center gap-6 mt-10 max-w-[1300px] mx-auto">
                 <div class="project-card relative h-[180px] w-[320px] rounded-[10px] overflow-hidden group">
                     <img src="img/AtTech.png" alt="Password Generator"
@@ -433,7 +435,7 @@
     </section>
     <!-- Services -->
 
-    <section>
+    <section id="services">
         <div class="w-full py-10 service">
             <p class="text-center text-3xl text-slate-800 font-extrabold">🍬
                 <span class="text-teal-500">Services</span> I Offer
@@ -475,7 +477,8 @@
                     <i class="material-icons text-white text-[70px]">storage</i>
                     <p class="text-white text-2xl text-center mb-4 font-semibold">Database Management</p>
                     <p class="text-white text-base font-medium text-center md:text-center px-5">Expertise in handling
-                        relational databases like PostgreSQL, MySQL, MsSql and NoSQL databases like MongoDB, ensuring optimal data
+                        relational databases like PostgreSQL, MySQL, MsSql and NoSQL databases like MongoDB, ensuring
+                        optimal data
                         storage, performance, and query efficiency.</p>
                 </div>
 
@@ -494,42 +497,48 @@
     </section>
 
     <!-- Contact -->
-    <section>
+    <section id="contact">
         <div class="bg-gray-100 w-full py-10 contact">
             <p class="py-[30px] text-center text-3xl text-slate-800 font-extrabold">🎯 Let's
                 <span class="text-teal-500">Work </span><span>together</span>
             </p>
+            <form onsubmit="sendMail(); reset(); return false;">
+                <!-- Name Field -->
+                <div class="relative px-[20px] sm:px-[60px] mb-[20px] sm:mx-auto sm:max-w-[400px] md:max-w-[600px]">
+                    <input type="text" id="fname"
+                        class="name border-2 w-full pl-[10px] border-teal-500 rounded-[5px] text-slate-800 bg-gray-100 py-2 focus:outline-none focus:border-teal-500 transition-colors peer"
+                        autocomplete="off" placeholder="First Name" required>
+                </div>
+                <div class="relative px-[20px] sm:px-[60px] mb-[20px] sm:mx-auto sm:max-w-[400px] md:max-w-[600px]">
+                    <input type="text" id="lname"
+                        class="name border-2 w-full pl-[10px] border-teal-500 rounded-[5px] text-slate-800 bg-gray-100 py-2 focus:outline-none focus:border-teal-500 transition-colors peer"
+                        autocomplete="off" placeholder="Last Name" required>
+                </div>
 
-            <!-- Name Field -->
-            <div class="relative px-[20px] sm:px-[60px] mb-[20px] sm:mx-auto sm:max-w-[400px] md:max-w-[600px]">
-                <input type="text" id="name"
-                    class="name border-2 w-full pl-[10px] border-teal-500 rounded-[5px] text-slate-800 bg-gray-100 py-2 focus:outline-none focus:border-teal-500 transition-colors peer"
-                    autocomplete="off" placeholder="Name">
-            </div>
+                <!-- Email Field -->
+                <div class="relative px-[20px] sm:px-[60px] mb-[20px] sm:mx-auto sm:max-w-[400px] md:max-w-[600px]">
+                    <input type="text" id="email"
+                        class="email border-2 w-full pl-[10px] border-teal-500 rounded-[5px] text-slate-800 bg-gray-100 py-2 focus:outline-none focus:border-teal-500 transition-colors peer"
+                        autocomplete="off" placeholder="Email" required>
+                </div>
 
-            <!-- Email Field -->
-            <div class="relative px-[20px] sm:px-[60px] mb-[20px] sm:mx-auto sm:max-w-[400px] md:max-w-[600px]">
-                <input type="text" id="email"
-                    class="email border-2 w-full pl-[10px] border-teal-500 rounded-[5px] text-slate-800 bg-gray-100 py-2 focus:outline-none focus:border-teal-500 transition-colors peer"
-                    autocomplete="off" placeholder="Email">
-            </div>
+                <!-- Message Field -->
+                <div class="relative px-[20px] sm:px-[60px] mb-[20px] sm:mx-auto sm:max-w-[400px] md:max-w-[600px]">
+                    <textarea id="subject"
+                        class="message border-2 w-full h-[200px] pl-[10px] border-teal-500 rounded-[5px] text-slate-800 bg-gray-100 py-2 focus:outline-none focus:border-teal-500 transition-colors peer resize-none"
+                        autocomplete="off" placeholder="Type your message here..." required></textarea>
+                </div>
 
-            <!-- Message Field -->
-            <div class="relative px-[20px] sm:px-[60px] mb-[20px] sm:mx-auto sm:max-w-[400px] md:max-w-[600px]">
-                <textarea id="message"
-                    class="message border-2 w-full h-[200px] pl-[10px] border-teal-500 rounded-[5px] text-slate-800 bg-gray-100 py-2 focus:outline-none focus:border-teal-500 transition-colors peer resize-none"
-                    autocomplete="off" placeholder="Type your message here..."></textarea>
-            </div>
-
-            <!-- Send Button -->
-            <div class="relative px-[20px] sm:px-[60px] mb-[20px] sm:mx-auto sm:max-w-[400px] md:max-w-[600px]">
-                <button
-                    class="send bg-teal-500 text-white font-medium w-full h-10 rounded-[5px] shadow-lg shadow-teal-500/30 transition-transform duration-300 hover:scale-105">Send</button>
-            </div>
+                <!-- Send Button -->
+                <div class="relative px-[20px] sm:px-[60px] mb-[20px] sm:mx-auto sm:max-w-[400px] md:max-w-[600px]">
+                    <button
+                      type="submit"  class="send bg-teal-500 text-white font-medium w-full h-10 rounded-[5px] shadow-lg shadow-teal-500/30">Send</button>
+                </div>
+            </form>
         </div>
     </section>
     <!-- Footer -->
-    <section>
+    <footer>
         <div class="w-full mt-5 mb-2 footer">
             <div id="socail" class="flex justify-center items-center gap-2">
                 <div class="group">
@@ -554,11 +563,14 @@
                     </a>
                 </div>
             </div>
-            <p class="w-full text-slate-800 mb-5 text-[13px] sm:text-[16px] text-center mt-2"><i class="bi bi-c-circle"></i>
+            <p class="w-full text-slate-800 mb-5 text-[13px] sm:text-[16px] text-center mt-2"><i
+                    class="bi bi-c-circle"></i>
                 2024 All rights
                 reserved | Designed with 💚 by Aman Tatla</p>
         </div>
-    </section>
+    </footer>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
