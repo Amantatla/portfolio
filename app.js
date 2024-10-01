@@ -76,7 +76,6 @@ tl.from(".name .item", {
     opacity: 0,
     y: -20,
     duration: .5,
-    delay: 0.5,
     stagger: 0.3
 })
 tl.from(".menu li", {
@@ -96,13 +95,13 @@ tl.from(".intro p", {
 tl.from(".intro .resume", {
     opacity: 0,
     y: 20,
-    duration: 0.5,
+    duration: 0.1,
     clearProps: "opacity,transform",
 });
 tl.fromTo(
     ".intro-img img",
     { scale: 0, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 0.5, stagger: 0.3 }
+    { scale: 1, opacity: 1, duration: 0.3, stagger: 0.3 }
 );
 
 
@@ -111,7 +110,6 @@ gsap.from(".about p.text-center", {
     opacity: 0,
     y: 50,
     duration: 0.5,
-    delay: 0.2,
     scrollTrigger: {
         trigger: ".about",
         start: "top 80%",
@@ -134,8 +132,7 @@ gsap.from(".about img.select-none", {
 gsap.from(".about .dots,.about span", {
     opacity: 0,
     x: 100,
-    duration: 0.8,
-    delay: 0.6,
+    duration: 0.6,
     stagger: 0.1,
     scrollTrigger: {
         trigger: ".about",
@@ -149,7 +146,6 @@ gsap.from(".skills p", {
     opacity: 0,
     y: 50,
     duration: 0.5,
-    delay: 0.2,
     scrollTrigger: {
         trigger: ".skills",
         start: "top 80%",
@@ -159,7 +155,7 @@ gsap.from(".skills p", {
 gsap.from(".skills .marquee", {
     scale: 0,
     duration: 1,
-    delay: 0.6,
+    delay: 0.3,
     scrollTrigger: {
         trigger: ".skills",
         start: "top 80%",
@@ -280,7 +276,6 @@ gsap.from(".experience .heading, .detail", {
     opacity: 0,
     y: 50,
     duration: 0.5,
-    delay: 0.2,
     scrollTrigger: {
         trigger: ".experience",
         start: "top 80%",
@@ -317,7 +312,6 @@ gsap.from(".project p", {
     opacity: 0,
     y: 50,
     duration: 0.5,
-    delay: 0.2,
     scrollTrigger: {
         trigger: ".project",
         start: "top 80%",
@@ -342,7 +336,6 @@ gsap.from(".service p", {
     opacity: 0,
     y: 50,
     duration: 0.5,
-    delay: 0.2,
     scrollTrigger: {
         trigger: ".service",
         start: "top 80%",
@@ -367,7 +360,6 @@ gsap.from(".contact p", {
     opacity: 0,
     y: 50,
     duration: 0.5,
-    delay: 0.2,
     scrollTrigger: {
         trigger: ".service",
         start: "top 80%",
@@ -392,7 +384,6 @@ gsap.from(".contact input, .contact textarea, .contact button", {
 gsap.from(".footer", {
     scale: 0,
     duration: 0.5,
-    delay: 0.2,
     scrollTrigger: {
         trigger: ".footer",
         start: "top 100%",
