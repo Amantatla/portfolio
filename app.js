@@ -58,11 +58,11 @@ function sendMail() {
     `
     console.log(ebody)
     Email.send({
-        SecureToken: "0a118199-02fc-4a26-885b-3159ad5007ea",
+        SecureToken: "0f58f742-490c-46db-808a-632a856009c2",
         To: "amantatla312@gmail.com",
         From: "amantatla312@gmail.com",
-        Subject: "Enquiry",
-        Body: 'this is body'
+        Subject: "My Portfolio",
+        Body: ebody
     }).then(
         message => alert(message)
     );
