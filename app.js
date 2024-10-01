@@ -56,7 +56,6 @@ function sendMail() {
     <br/>
     <b> Description: </b> ${subject.value}
     `
-    console.log(ebody)
     Email.send({
         SecureToken: "0f58f742-490c-46db-808a-632a856009c2",
         To: "amantatla312@gmail.com",
