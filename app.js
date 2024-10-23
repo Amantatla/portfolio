@@ -4,71 +4,6 @@ window.onload = function () {
     window.scrollTo(0, 0);
 };
 
-// small screen menu 
-document.addEventListener('DOMContentLoaded', () => {
-    const menuIcon = document.getElementById('bars');
-    const menu = document.querySelector('ul');
-    const menuItems = document.querySelectorAll('.menu a');
-
-    menuIcon.addEventListener("click", (e) => {
-        toggleMenu(e.target);
-    });
-
-    menuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            closeMenu();
-        });
-    });
-
-    function toggleMenu(target) {
-        if (target.getAttribute('data-state') === 'menu') {
-            target.classList.remove('fa-bars');
-            target.classList.add('fa-times');
-            target.setAttribute('data-state', 'close');
-            menu.classList.add('top-[80px]', 'opacity-100');
-        } else {
-            closeMenu();
-        }
-    }
-
-    function closeMenu() {
-        menuIcon.classList.remove('fa-times');
-        menuIcon.classList.add('fa-bars');
-        menuIcon.setAttribute('data-state', 'menu');
-        menu.classList.remove('top-[80px]', 'opacity-100');
-    }
-});
-
-// Send Email
-function sendMail() {
-
-    const fname = document.getElementById("fname");
-    const lname = document.getElementById("lname");
-    const email = document.getElementById("email");
-    const subject = document.getElementById("subject");
-
-    let ebody = `
-    <b> First name: </b> ${fname.value}
-    <br/>
-    <b> Last name: </b> ${lname.value}
-    <br/>
-    <b> Email: </b> ${email.value}
-    <br/>
-    <b> Description: </b> ${subject.value}
-    `
-    Email.send({
-        SecureToken: "0f58f742-490c-46db-808a-632a856009c2",
-        To: "amantatla312@gmail.com",
-        From: "amantatla312@gmail.com",
-        Subject: "My Portfolio",
-        Body: ebody
-    }).then(
-        message => alert(message)
-    );
-}
-
-
-
 // gsap 
 let tl = gsap.timeline();
 // navbar
@@ -390,3 +325,68 @@ gsap.from(".footer", {
         toggleActions: "play none none none"
     }
 });
+
+// Others
+
+// small screen menu 
+document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.getElementById('bars');
+    const menu = document.querySelector('ul');
+    const menuItems = document.querySelectorAll('.menu a');
+
+    menuIcon.addEventListener("click", (e) => {
+        toggleMenu(e.target);
+    });
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            closeMenu();
+        });
+    });
+
+    function toggleMenu(target) {
+        if (target.getAttribute('data-state') === 'menu') {
+            target.classList.remove('fa-bars');
+            target.classList.add('fa-times');
+            target.setAttribute('data-state', 'close');
+            menu.classList.add('top-[80px]', 'opacity-100');
+        } else {
+            closeMenu();
+        }
+    }
+
+    function closeMenu() {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+        menuIcon.setAttribute('data-state', 'menu');
+        menu.classList.remove('top-[80px]', 'opacity-100');
+    }
+});
+
+// Send Email
+function sendMail() {
+
+    const fname = document.getElementById("fname");
+    const lname = document.getElementById("lname");
+    const email = document.getElementById("email");
+    const subject = document.getElementById("subject");
+
+    let ebody = `
+    <b> First name: </b> ${fname.value}
+    <br/>
+    <b> Last name: </b> ${lname.value}
+    <br/>
+    <b> Email: </b> ${email.value}
+    <br/>
+    <b> Description: </b> ${subject.value}
+    `
+    Email.send({
+        SecureToken: "0f58f742-490c-46db-808a-632a856009c2",
+        To: "amantatla312@gmail.com",
+        From: "amantatla312@gmail.com",
+        Subject: "My Portfolio",
+        Body: ebody
+    }).then(
+        message => alert(message)
+    );
+}
